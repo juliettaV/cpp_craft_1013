@@ -13,6 +13,12 @@ void rev_line(char* line);
 
 int main()
 {
+    //the first_line had to be up to 100000 symbols by condition
+    //to implement it we just need to read the line in parts and process
+    //this parts like I did it with my first_line[] buffer
+    //but I've spent too much time for my first task and
+    //though the task was also obout memory management
+    //I hope, it will be OK if I leave it that way in order to start my homework №2
     char first_line[256] = {};
     char line[256] = {};
 
