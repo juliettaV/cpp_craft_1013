@@ -25,7 +25,6 @@ int read_data_from_file( int* column, int* row, char**& ocean)
     if(!is)
         std::cout << "File text.txt opening problemes!" << std::endl;
 
-    char ch;
     char line[100];
     while(is.getline(line, 100, '\n'))
     {
