@@ -7,7 +7,7 @@
 //function of comparison for set
 bool compare(float a, float b)
 {
-    return (std::fabs(a-b) > 0.0001f) && (a < b);
+    return (std::fabs(a-b) > 0.00001f) && (a < b);
 };
 
 int main()
@@ -15,13 +15,13 @@ int main()
     size_t num_of_rows = 0;
     float f;
 
-    std::ifstream is("text.txt");
-    std::ofstream os("out.txt");
+    std::ifstream is("input.txt");
+    std::ofstream os("output.txt");
 
     if(!os)
         std::cout << "Output file opening problemes!" << std::endl;
     if(!is)
-        std::cout << "File text.txt opening problemes!" << std::endl;
+        std::cout << "File input.txt opening problemes!" << std::endl;
 
     is >> num_of_rows;
 

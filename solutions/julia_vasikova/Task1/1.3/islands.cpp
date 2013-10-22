@@ -21,7 +21,7 @@ int check_island(int i, int j, char** ocean, int columns, int rows)
 
 int read_data_from_file( int* column, int* row, char**& ocean)
 {
-    std::ifstream is("text.txt");
+    std::ifstream is("input.txt");
     if(!is)
         std::cout << "File text.txt opening problemes!" << std::endl;
 
@@ -58,7 +58,7 @@ int main()
 
     char** ocean;
 
-    read_data_from_file(&rows, &columns, ocean);
+    read_data_from_file( &columns, &rows, ocean);
 
     //process our matrix and find out all the islands
     for(int i = 0; i < rows; ++i)
@@ -74,9 +74,17 @@ int main()
         }
 
     //output the number of islands to file
-    std::ofstream os("out.txt");
+    std::ofstream os("output.txt");
     os << "number of islands: " << n_islands << '\n';
     os.close();
+
+    //screen output
+    for(int i = 0; i < rows; ++i)
+    {
+        for(int j = 0; j < columns; ++j)
+            std::cout << ocean[i][j];
+        std::cout << std::endl;
+    }
 
     //delete our dinamic massive
     for(int i = 0; i < rows; i++)

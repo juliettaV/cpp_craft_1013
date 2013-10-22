@@ -22,8 +22,8 @@ int main()
     char first_line[256] = {};
     char line[256] = {};
 
-    std::ifstream is("text.txt");
-    std::ofstream os("out.txt");
+    std::ifstream is("input.txt");
+    std::ofstream os("output.txt");
     if(!os)
         std::cout << "Output file opening problemes!" << std::endl;
     if(!is)
