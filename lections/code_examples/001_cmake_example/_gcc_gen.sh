@@ -1,5 +1,5 @@
 
-export SOLUTION_NAME=system_utilities
+export SOLUTION_NAME=cmake_example
 
 export BUILD_TYPE=Debug
 if [ "$1" == 'Release' ];
